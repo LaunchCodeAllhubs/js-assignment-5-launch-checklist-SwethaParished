@@ -42,9 +42,9 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     }
     //check that fuelLevel and cargoLevel are numbers and pilot and co-pilot are strings
     else if (validateInput(fuelLevel) === 'Not a Number' || validateInput(cargoLevel) === 'Not a Number') {
-        alert(`Please enter numerical values for Fuel Level and Cargo Mass`);
+        alert(`Make sure to enter valid information for each field!`);
     } else if (validateInput(pilot)===`Is a Number`|| validateInput(copilot) === `Is a Number`) {
-        alert('Please do not enter numbers for name of pilot or co-pilot');
+        alert('Make sure to enter valid information for each field!');
     } 
     else {
     //update pilot/copilot status
@@ -54,6 +54,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     
     //check fuel levels and update faulty items
     if (Number(fuelLevel) < 10000) {
+        alert("Fuel too low");
         fuelStatus.innerHTML = `Not enough fuel for journey`;
         list.style.visibility = 'visible';
         launchStatus.innerHTML = `Shuttle not ready for launch`;
