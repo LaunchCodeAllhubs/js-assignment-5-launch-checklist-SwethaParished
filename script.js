@@ -14,7 +14,7 @@ window.addEventListener("load", ()=> {
         //use formsubmission to validate and update list
         formSubmission(document,list,pilot,copilot,fuelLevel,cargoLevel);
    
-
+    })
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
    let listedPlanetsResponse = myFetch();
@@ -33,5 +33,5 @@ window.addEventListener("load", ()=> {
        let moons = planet.moons;
        addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl);
     })
-})
+
 });
